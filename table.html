@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempio di tabella</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        /* border-collapse sceglie come comportarsi quando due bordi
+        si affiancano */
+      }
+
+      td {
+        border: 1px solid black;
+        padding: 5px;
+        min-width: 150px;
+      }
+
+      #previous {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <table>
+        <thead>
+          <!-- intestazione tabella: inserisco il titolo e la riga con
+                i nomi dei campi -->
+          <caption>
+            UTENTI
+          </caption>
+          <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Età</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- i dati veri e propri -->
+          <tr>
+            <td>Stefano</td>
+            <td>Casasola</td>
+            <td>19</td>
+            <td>stefano@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>Mario</td>
+            <td>Rossi</td>
+            <td>25</td>
+            <td>mario@gmail.com</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <!-- riga conclusiva, con calcoli, tasti di paginazione, etc. -->
+          <tr>
+            <td colspan="2" id="previous"><button>INDIETRO</button></td>
+            <td colspan="2"><button>AVANTI</button></td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <footer></footer>
+  </body>
+</html>

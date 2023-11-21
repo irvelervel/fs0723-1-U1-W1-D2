@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esempio di form</title>
+  </head>
+  <body>
+    <main>
+      <h2>Registrazione utente</h2>
+      <form>
+        <!-- il tag <form> racchiude tutto il contenuto del form -->
+        <div>
+          <label for="campo-nome">Inserisci qui il tuo nome</label>
+          <input type="text" id="campo-nome" autofocus required />
+        </div>
+        <!-- scrivere type="text" equivale a non inserire il type, "text" è il 
+        valore di default -->
+        <div>
+          <label for="campo-cognome">Inserisci qui il tuo cognome</label>
+          <input type="text" id="campo-cognome" required />
+        </div>
+        <div>
+          <label for="campo-eta">Inserisci qui la tua età</label>
+          <input type="number" id="campo-eta" min="0" />
+        </div>
+        <div>
+          <label for="campo-compleanno"
+            >Inserisci qui la tua data di nascita</label
+          >
+          <input type="date" id="campo-compleanno" />
+        </div>
+        <div>
+          <label for="campo-allergie">Scrivi qui le tue allergie!</label>
+          <textarea id="campo-allergie" rows="5"></textarea>
+        </div>
+        <div>
+          <label for="campo-strumenti">Che strumento sai suonare?</label>
+          <select id="campo-strumenti">
+            <option></option>
+            <option>Batteria</option>
+            <option>Chitarra</option>
+            <option>Pianoforte</option>
+          </select>
+        </div>
+        <div>
+          <!-- questo bottone è automaticamente diventato un bottone 
+            di tipo "submit", perchè è stato definito dentro il tag form! -->
+          <button>INVIA</button>
+        </div>
+      </form>
+      <!-- su questo bottone NON SERVE specificare il type perchè siamo FUORI dal form -->
+      <button onclick="alert('CIAO EPICODE!')">MOSTRA ALERT</button>
+    </main>
+  </body>
+</html>
